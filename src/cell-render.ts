@@ -197,7 +197,7 @@ export function cellRender(
 
   // clip
   canvas.rect(0, 0, rect.width, rect.height).clip();
-  if (bgcolor) canvas.prop('fillStyle', bgcolor).fill();
+  if (bgcolor) canvas.prop('fillStyle', bgcolor).fill('nonzero');
 
   // rotate
   if (rotate && rotate > 0) {

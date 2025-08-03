@@ -30,7 +30,7 @@ function cellRenderer(canvas: Canvas, { x, y, width, height }, cell) {
       .lineTo(width - 2, 2)
       .lineTo(width - 7, 10)
       .closePath()
-      .fill();
+      .fill('nonzero');
   }
   return true;
 }
@@ -50,7 +50,7 @@ TableRenderer.create('#table', 1400, 800)
         .lineTo(width - 2, 2)
         .lineTo(width - 7, 10)
         .closePath()
-        .fill();
+        .fill('nonzero');
       return true;
     },
   })

@@ -176,7 +176,7 @@ function renderArea(
     .translate(area.x, area.y)
     .prop('fillStyle', renderer._bgcolor)
     .rect(0, 0, area.width, area.height)
-    .fill()
+    .fill('nonzero')
     .clip();
 
   const mergeCellStyle = (r: number, c: number, ce: Cell) => {
@@ -295,7 +295,7 @@ export function render(renderer: TableRenderer) {
           .save()
           .prop({ fillStyle: bgcolor })
           .rect(0, 0, width, height)
-          .fill()
+          .fill('nonzero')
           .restore();
       renderLines(canvas, renderer._headerGridline, () => {
         canvas.line(0, height, width, height).line(width, 0, width, height);
